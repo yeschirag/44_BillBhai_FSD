@@ -9,7 +9,9 @@
 * **Date of Interaction:** 30th January 2026
 * **Mode of Interaction:** Online interview
 * **Duration (in minutes):** 40 minutes
-* **Publicly Accessible Video Link:** https://drive.google.com/file/d/1Af6d4sfO4-Gk5ZoZtf4WrBlAwL16Qirw/view?usp=sharing
+* **Publicly Accessible Video Link:-** 
+  Youtube Link : https://www.youtube.com/watch?v=BKSiE6mxYP8
+  Drive Link : https://drive.google.com/file/d/1Af6d4sfO4-Gk5ZoZtf4WrBlAwL16Qirw/view?usp=sharing
 
 ---
 
