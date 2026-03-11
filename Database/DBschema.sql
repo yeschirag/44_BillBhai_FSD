@@ -69,6 +69,7 @@ CREATE TABLE PRODUCT (
     product_id  INT AUTO_INCREMENT PRIMARY KEY,
     supplier_id INT NOT NULL,
     name        VARCHAR(150) NOT NULL,
+    selling_company VARCHAR(150),
     barcode     VARCHAR(100) UNIQUE,
     category    VARCHAR(100),
     price       DECIMAL(10,2) NOT NULL,
@@ -85,7 +86,6 @@ CREATE TABLE PRODUCT (
 CREATE TABLE INVENTORY (
     inventory_id    INT AUTO_INCREMENT PRIMARY KEY,
     product_id      INT NOT NULL,
-    company_id      INT NOT NULL,
     stock_available INT NOT NULL DEFAULT 0,
     reorder_level   INT DEFAULT 10,
     location        VARCHAR(100),
@@ -93,12 +93,8 @@ CREATE TABLE INVENTORY (
 
     CONSTRAINT fk_inventory_product
         FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
-
-    CONSTRAINT fk_inventory_company
-        FOREIGN KEY (company_id) REFERENCES COMPANY(company_id)
-        ON DELETE RESTRICT ON UPDATE CASCADE
-);
+        ON DELETE CASCADE ON UPDATE CASCADE
+);   
 
 -- ORDERS depends on CUSTOMER and STAFF
 -- total_amount removed — derived attribute
@@ -242,3 +238,4 @@ CREATE TABLE REPORT (
         FOREIGN KEY (generated_by) REFERENCES STAFF(staff_id)
         ON DELETE SET NULL ON UPDATE CASCADE
 );
+
